@@ -228,6 +228,7 @@ END;
 //span class="glyphicon glyphicon-flag pull-right" aria-hidden="true">
 	}
 
+// Själva innehållet med diverse formulärer //
 $content = <<<END
 
 		<div class="wrapper margin-top-100">

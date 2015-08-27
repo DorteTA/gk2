@@ -1215,7 +1215,7 @@ btn > a:visited  {
 	color: #fff;
 }
 .login-text,
-btn,
+btn
 li.login-text > a:link,
 li.login-text > a:active,
 li.login-text > a:hover,
