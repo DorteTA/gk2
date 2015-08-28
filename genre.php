@@ -261,7 +261,7 @@ $content = <<<END
 							{$feedback}
 								<form action="genre.php?grid={$grid}" method="post" class="quicksand text-bold">
 									<h3>Kommentera</h3>
-									<textarea id="comment" name="comment" cols="80" rows="6"></textarea>
+									<textarea id="comment" name="comment" cols="75" rows="6"></textarea>
 									</br>
 									
 									<button type="submit" class="btn btn-primary btn-sm pull-left text-bold login-text
