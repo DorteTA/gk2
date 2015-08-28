@@ -113,16 +113,13 @@ END;
 		        " : " . $mysqli->error);
 			}
 			$feedback = "<p class=\"text-green\">Inlägget har publicerats</p>";
-			
-			// http://stackoverflow.com/questions/11299006/header-location-delay
-			//sleep(2);
 			header("Location: index.php", true, 303);
 			exit;
 		}
 	}
 	}
 
-// Lägger till en dropdown meny där det går och välja vilken genrer som den ska sparas som.
+// Lägger till en dropdown meny där det går att välja vilken genre den ska sparas som.
 $query = <<<END
 
  	SELECT * FROM genre
@@ -149,31 +146,52 @@ $content = <<<END
 		<div class="container-fluid guide-review">
 			<div class="row margin-top-100">
 				<div class="col-md-9 margin-left-guide"> 
-							<div class="guide_review">
-								<form action="guide_review.php" method="post" id="guide_review_form">
-									<div class="panel panel-default panel-guide-review">
-										<div class="panel-heading panel-heading-guide-review">Skriva recension eller guide
-										</div><!-- panel heading -->
+					<div class="guide_review">
+
+						<form action="guide_review.php" method="post" id="guide_review_form">
+							<div class="panel panel-default panel-guide-review">
+								
+								<div class="panel-heading panel-heading-guide-review">
+									Skriva recension eller guide
+								</div><!-- panel heading -->
 						
-										<div class="panel body panel-guide-review margin-skriva skriva quicksand text-black text-14px">
-										<label for="title"><h3 class="quicksand">Titel</h3></label>
-										<br>
-										<input type="text" class="form-control" id="title" name="title" value="{$title}" placeholder="Ange titeln"></br></br>
-										<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
-										<input type="radio" id="reviewcheck" name="review" value="Review" class="quicksand">Recension</br></br>
-										{$feedback}
-										<label for="genretype">Genre</label><br>
-										{$dropdown}<br><br>
-										<label for="information">Innehållet:</label>
-										<textarea id="nicEdit" name="nicEdit" cols="80" rows="15">{$text}</textarea></br>
-										<label for="grade" id="gradescale">Betyg (1-5)</label></br>
-										<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="1">
-										<button type="submit" id="publish" name="publish_guide_review" value="Publicera">Publicera innehållet</button><br><br>
-										{$admindelete}
-										</div>
-									</div>
-								</form>			
-							</div>				
+								<div class="panel body panel-guide-review margin-skriva skriva quicksand text-black text-14px">
+									<label for="title"><h3 class="quicksand">Titel</h3></label>
+									</br>
+									<input type="text" class="form-control" id="title" name="title" value="{$title}"
+									 placeholder="Ange titeln">
+									 </br>
+									<input type="radio" id="guidecheck" name="guide" value="Guide">Guide
+									<input type="radio" id="reviewcheck" name="review" value="Review" class="quicksand">Recension
+									</br>
+									</br>
+									{$feedback}
+									<label for="genretype">Genre</label><br>
+									{$dropdown}
+									<br>
+									<br>
+									<label for="information">
+										Innehållet
+									</label>
+									<textarea id="nicEdit" name="nicEdit" cols="80" rows="15">
+										{$text}
+									</textarea>
+									</br>
+									<label for="grade" id="gradescale">
+										Betyg (1-5)
+									</label>
+									<input type="number" class="text-black" id="grade" name="grade" min="1" max="5" value="1">
+									<button type="submit" id="publish" name="publish_guide_review" value="Publicera">
+										Publicera innehållet
+									</button>
+									<br>
+									<br>
+									{$admindelete}
+								</div><!-- panel body panel guide review -->
+							</div>
+						</form>			
+					</div><!-- guide review -->
+
 				</div><!-- col md 9 -->
 				<div class="col-md-3 margin-guide-review-ads pull-right">
 					<!-- right column row 2 -->

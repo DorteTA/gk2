@@ -1080,25 +1080,27 @@ a:active {
 .dropdown-top-margin {
 	margin-top: 51px;
 }
-#searchgenrer
-{
+
+/*
+#searchgenrer {
   margin-left: 25px;
   font-family: 'Quicksand';
 }
-#searchgenre
-{
+
+#searchgenre {
   width: 300px;
-
 }
+*/
 
+/* Dropdown vit länkfärg */
 .dropdown
  li > a:link, a:hover, a:active, a:visited {
 color: #fff;
 }
+
 /* dropdown meny aktiva lankar farg mm */
 .dropdown-menu > li > a,
 .dropdown-menu2 > li > a {
-
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -1143,6 +1145,7 @@ color: #fff;
 	outline: 1px solid #e5e9f7;
 }
 
+/* Dopdown meny bakgrundsfärg */
 @dropdown-link-hover-bg {
 background: -webkit-linear-gradient(90deg, #e5e9f7, #5164be); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(90deg, #e5e9f7, #5164be); /* For Opera 11.1 to 12.0 */
@@ -1157,15 +1160,18 @@ background: -webkit-linear-gradient(90deg, #e5e9f7, #5164be); /* For Safari 5.1 
     background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
 }
+
+/* */
 .panel-genre {
     width: 750px;
 	min-height: 100px;
 	height: auto;
  }
- .panel-genre-body
- {
+
+ .panel-genre-body {
   overflow: hidden;
  }
+
 .panel-default > .panel-heading-genre {
 	width: 760px;
 }
@@ -1175,6 +1181,7 @@ background: -webkit-linear-gradient(90deg, #e5e9f7, #5164be); /* For Safari 5.1 
 	min-height: 100px;
 	height: auto;
  }
+
 .panel-default > .panel-heading-guide-review {
 	width: 897px;
 }
@@ -1184,7 +1191,8 @@ background: -webkit-linear-gradient(90deg, #e5e9f7, #5164be); /* For Safari 5.1 
 	width: 70%;
 
 }
-/* listed bullet lankfarger i genre meny */
+
+/* listed bullet lankfarger vit i genre meny */
 li > a:link,
 li > a:hover,
 li > a:focus,
@@ -1193,7 +1201,6 @@ li > a:visited {
 	text-decoration: none;
 }
 /* unvisited link */
-
 li.media > a:link,
 li.media > a:hover,
 li.media > a:focus,
@@ -1201,6 +1208,7 @@ li.media > a:visited {
   color: #667094;
   text-decoration: none;
 }
+
 btn > a:link,
 btn > a:hover,
 btn > a:active,
@@ -1230,11 +1238,11 @@ a:visited {
 	text-decoration: none;
 }
 
+/* Länkar blir svarta när pilen svävar över dem */
 a:hover {
 	color: #000;
 
 }
-
 
 a:link .login,
 a:active .login,
@@ -1243,8 +1251,6 @@ a:hover  .login {
     color: #fff;
 	text-decoration: none;
 }
-
-
 
 /* satter margin vaenster till minus 15px i paa genre sidan */
 .margin-genre {
@@ -1653,10 +1659,7 @@ border-radius: 3px;
 height: auto;
 }
 
-.show {
 
-visibility: show;
-}
 .margin-left-topplista {
 margin-left: -15px;
 margin-right: -5px;
@@ -1722,17 +1725,19 @@ color: #fff;
 color: #fff;
 }
 
+/* Register villkor */
 .villkor {
 height: auto;
 background-color: #fff;
 width: 100%;
-
 }
 
+/* Dölja */
 .hidden {
 visibility: hidden;
 }
 
+/* Visa */
 .show {
 visibility: show;
 }
@@ -1772,14 +1777,6 @@ color: #000;
   color: #269abc;
 }
 
-/* chatcom farger satt lika rader med bakgrundsfarg vit 
-.row .guestbook_feed:nth-child(odd){
-  background-color: #fff;
-  border: 1px solid #eee;
-  color: #bbb;
-}
-*/
-
 span.media-top {
 margin-right: 10px;
 margin-left: 0;
@@ -1787,7 +1784,6 @@ margin-left: 0;
 
 .textarea-width-498 {
 color: #000;
-/* width: 490px; */
 width: 835px;
 }
 
@@ -1797,18 +1793,19 @@ float:right;
 margin-right: -435px;
 }
 
+/* chat margin */
 .chatcom {
 	margin-left: -30px;
-	margin-right: auto;
-	
+	margin-right: auto;	
 }
 
+/* Fixering med scroll i y-led */
 .fixed {
 position: fixed;
 overflow-y: auto;
-
 }
 
+/* chat gästbok */
 .guestbook
 {
   height: 320px;
@@ -1816,11 +1813,14 @@ overflow-y: auto;
   border-color: Transparent Transparent Transparent;
  
 }
+
+/* chat gästbok botten */
 .guestbook_bottom {
 height: 150px;
 margin-left: 40px;
 }
 
+/* register topp margin */
 .margin-top-register{ 
 	margin-top: -75px;
 	margin-left: -125px;
@@ -1836,54 +1836,33 @@ margin-left: 40px;
 }
 */
 
-/* register panel heading width 415px */
+/* register panel heading bredd 415px */
 .panel-default > .panel-heading-415px {
   width: 415px;
 }
 
-/* register panel width 405px */
+/* register panel bredd 405px */
 .panel-width-405px {
   width: 405px;
 }
 
-/* register right margins */
+/* register högre margin */
 .register-right {
 	margin-right: -75px;
 	margin-left: 10px;
 }
 
-/* register left margins */
+/* register vänster margin */
 .register-left {
 	margin-left: -100px;
 	margin-right: 50px;
 }
 
-/* register policy height 513px */
+/* register policy höjd min 513px */
 .policy-height-600px {
 min-height: 513px;
 }
 
-/* media queries for register.php ska pillas mer med sen 
-@media (max-width: 1024px),
-@media (max-width: 767px) {
-    body.register {
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-top: 0;
-	margin-bottom: 0;
-	overflow: scroll;
-
-	}
-	.register-right {
-	margin-right: 0;
-	margin-left: 10px;
-	}
-	.register-left {
-	margin-left: 0;
-	margin-right: 10px;
-	}
-}
-*/
 .error {
   color: #FF0000;
 }
