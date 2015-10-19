@@ -23,21 +23,29 @@ if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
 		<span class="glyphicon glyphicon-king pull-right text-black" aria-hidden="true"></span>
 END;
 	$adminMeny = <<<END
-	<li role="presentation"><a role="menuitem" tabindex="-1" href="admin.php">
-	<span class="glyphicon glyphicon-king pull-right text-white" aria-hidden="true"></span>Admin</a>
+	<li role="presentation">
+		<a role="menuitem" tabindex="-1" href="admin.php">
+			<span class="glyphicon glyphicon-king pull-right text-white" aria-hidden="true"></span>
+			Admin
+		</a>
 	</li>	
 END;
 	
 	$admindelete = <<<END
-	<button type="submit" id="delete" name="delete" value="delete">Delete</button>
+	<button type="submit" id="delete" name="delete" value="delete">
+		Delete
+	</button>
 END;
 	
 	}
 	else if($_SESSION["roletype"] == 0)
 	{
 	$profilMeny = <<<END
-	<li role="presentation"><a role="menuitem" tabindex="-1" href="profile.php">
-	<span class="glyphicon glyphicon-user pull-right text-white" aria-hidden="true"></span>Profil</a>
+	<li role="presentation">
+		<a role="menuitem" tabindex="-1" href="profile.php">
+			<span class="glyphicon glyphicon-user pull-right text-white" aria-hidden="true"></span>
+			Profil
+		</a>
 	</li>
 END;
 	}
@@ -58,7 +66,11 @@ if($res->num_rows > 0){
 
 		$genre .= <<<END
 		
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="choosegenre.php?genretype={$genretype}">{$genretype}</a></li>	
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="choosegenre.php?genretype={$genretype}">
+					{$genretype}
+				</a>
+			</li>	
 END;
 	}
 }
@@ -75,9 +87,13 @@ $header = <<<END
 
 		<!-- bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		
 		<!-- gamerskeep style -->
 		<link rel="stylesheet" href="css/style.css">
+
+		<!-- responsivitet pa login -->
 		<link rel="stylesheet" href="css/mediaqueries.css">
+		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     	<!--[if lt IE 9]>
@@ -86,7 +102,6 @@ $header = <<<END
     	<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		
-		<!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_on_multiple -->
 <!-- soekanimation -->
 <script>
 $(document).ready(function(){
@@ -119,7 +134,6 @@ $(document).ready(function(){
 </script>
 
 <!-- header ikoner -->
-<!-- http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mouseover_mouseout -->
 <script>
 $(document).ready(function(){
     $(".soek_button").mouseover(function(){
@@ -158,33 +172,39 @@ $(document).ready(function(){
 
 	</head>
 	<body>
+
+		<!-- header -->
+	
 		<div id="header" class="header-bg navbar navbar-default navbar-fixed-top no-border">
 			
-			<!-- Meny left with logo -->
-			<div class="col-md-6 column-left margin-right-zero">
-				<a href="index.php"><img src="images/logo-menu.png" class="img header-logo"></a>
-				<div class="pull-right">
-						
+			<!-- Meny vanster med logga -->
 
+			<div class="col-md-6 column-left margin-right-zero">
+				<a href="index.php">
+					<img src="images/logo-menu.png" class="img header-logo">
+				</a>
+				
+				<div class="pull-right">
+				
 				</div><!-- pull right -->
+
 			</div><!-- col md 6 -->
 			
-			<!-- center -->
-			<div class="col-md-1 column-center pull-left margin-right-zero">
-			
-			
+			<!-- mitten -->
+			<div class="col-md-1 column-center pull-left margin-right-zero">	
 								
 			</div><!-- col md 1 center -->
 			
-			<!-- Meny right -->
+			<!-- Meny hogre -->
 			<div class="col-md-5 column-right pull-right margin-right-zero nav nav-pills pull-right">
-			
 			
 				<ul>
 				
 					<div class="dropdown">
 				
-					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu" aria-expanded="true">
+					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
+					aria-expanded="true">
+					
 					<a href="profile.php" alt="Profil" title="Profil"><div class="header_ikoner header_profil no-border pull-right"></div></a>
 					</li>
 			  		</ul>
