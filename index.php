@@ -230,14 +230,22 @@ END;
 						<div class="media-body">
 							<ul class="list style margin-left-zero">
 								<ol class="margin-left-zero">
-									<li class="list-style pull-left"><span class="badge badge-info text-white" aria-hidden="true">
-									{$topplistreview_nummer}</span>
+									<li class="list-style pull-left">
+										<span class="badge badge-info text-white" aria-hidden="true">
+											{$topplistreview_nummer}
+										</span>
 									</li>
 								</ol>
 							</ul>
-							<h4 class="media-heading quicksand text-bold"><a href="genre.php?grid={$grid}">{$title}</a>							
-							<br>
-							<h5 class="media-heading quicksand text-14px text-black">{$subtext}...</h5>
+							<h4 class="media-heading quicksand text-bold">
+								<a href="genre.php?grid={$grid}">
+									{$title}
+								</a>							
+								<br>
+							</h4>
+							<h5 class="media-heading quicksand text-14px text-black">
+								{$subtext}...
+							</h5>
 						</div><!-- media body -->
 					</li><!-- media -->
 				</ul><!-- media list -->
@@ -258,11 +266,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px quicksand">Topplista guider</div>
+								<div class="panel-heading panel-heading-250px quicksand">Senaste guider</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$toplistguide}</p>
+				  							<p>{$latestguide}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -276,11 +284,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
+								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$toplistreview}</p>
+				  							<p>{$latestreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -311,11 +319,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste guider</div>
+								<div class="panel-heading panel-heading-250px">Topplista guider</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestguide}</p>
+				  							<p>{$toplistguide}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
@@ -327,11 +335,11 @@ $content = <<<END
 
 							<div class ="panel panel-default panel-width-240px pull-left">
 
-								<div class="panel-heading panel-heading-250px">Senaste recensioner</div>
+								<div class="panel-heading panel-heading-250px">Topplista recensioner</div>
 
 				  					<div class="panel-body height-410px">
 
-				  							<p>{$latestreview}</p>
+				  							<p>{$toplistreview}</p>
 				  					</div><!-- panel body -->
 
 								</div><!-- panel heading -->
