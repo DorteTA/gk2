@@ -19,7 +19,8 @@ END;
 	$res = $mysqli->query($admit) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 }
-// Hämtar ut allt i guidereviewinfo som har status 1 i posten flag
+
+// Hämtar ut allt i guide recension som har flaggats som olämpligt
 $query = <<<END
 
 	SELECT * FROM guidereviewinfo
@@ -39,30 +40,30 @@ END;
 			$gr_flag .= <<<END
 				
 				<form action="admin.php?grid={$grid}" method="post">
-				<a href="genre.php?grid={$grid}" class="pull-left">{$title}</a>
-				
-					<div class="pull-left">
-						<button type="submit" name="ok" value="" class="pull-left margin-right-span-10px btn btn-sm-span span-color-green">						
+					<a href="genre.php?grid={$grid}" class="pull-left">{$title}</a>
+					
+					<!-- Godkänn knappen grön -->
+					<div class="pull-right">
+						<button type="submit" name="ok" value="" class="pull-left margin-right-span-10px
+						 btn btn-sm-span span-color-green">						
 							<span class="glyphicon glyphicon-ok pull-right" aria-hidden="true"></span>						
 						</button>
 					</div>
 					
-					<div class="pull-left red-a-text">
-						<a href="delete.php?grid={$grid}" class="delete btn btn-sm-span span-color-red pull-left red-a-text" role="button">
+					<!-- Radera knappen röd -->
+
+					<div class="pull-right red-a-text">
+						<a href="delete.php?grid={$grid}" class="delete btn btn-sm-span span-color-red
+						 pull-left red-a-text" role="button">
 							<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
 						</a>
 					</div>	
 				</form>
-				
-				
-				
-				
-
 END;
 		}
 	}
 
-// Sätter flaggan till 0 om den är inte olämplig
+// Sätter flaggan till 0 om moderatorn finnar innehållet lämpligt
 if(isset($_POST['okcomment']))
 {
 	$admit = <<<END
@@ -72,12 +73,14 @@ END;
 	$res = $mysqli->query($admit) or die("Could not query database" . $mysqli->errno . 
 	  " : " . $mysqli->error);
 }
-// Hämtar ut allt i comment som har status 1 i posten flag
+
+// Hämtar ut allt från kommentar som har flaggats som olämpligt
 $query = <<<END
 
 	SELECT * FROM comment
 	WHERE flag = 1;
 END;
+
 	$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
 		        " : " . $mysqli->error);
 
@@ -92,49 +95,49 @@ END;
 			$comment_flag .= <<<END
 				
 				<form action="admin.php?commentid={$commentids}" method="post">
-				<a href="genre.php?grid={$commentgrid}" class="pull-left">{$comment}</a>
-				
-						
-					<div class="pull-left">
+					
+					<a href="genre.php?grid={$commentgrid}" class="pull-left">{$comment}</a>
+					
+					<!-- Radera det olämpliga innehållet från databasen -->
+
+					<div class="pull-right red-a-text">
+					<a href="delete.php?commentid={$commentids}" role="button" class="btn btn-sm-span span-color-red pull-left red-a-text">
+						<span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span>
+					</a></button>
+					</div>
+
+					<!-- Godkänna innehållet och sätta flaggan till grön -->
+
+					<div class="pull-right">
 					<button type="submit" class="btn btn-sm-span span-color-green" name="okcomment" value="">
 						<span class="glyphicon glyphicon-ok pull-left" aria-hidden="true"></span>
 					</button>
 					</div>
 					
-					<div class="pull-left red-a-text">
-					<a href="delete.php?commentid={$commentids}" role="button" class="btn btn-sm-span span-color-red pull-left red-a-text">
-						<span class="glyphicon glyphicon-remove pull-left" aria-hidden="true"></span>
-					</a></button>
-					</div>
-					
-					
-					<br>
-					<br>
-					
 				</form>
 END;
 		}
 	}
-			//<button class="delete"><a href="delete.php?grid={$grid}">x</a></button>
-			//<button class="admit"><a href="admin.php?grid={$grid}">V</a></button><br><br>
 
-	$content = <<<END
-	<div class="row margin-top-100">
-			
-		<div class="col-md-12 panel panel-default panel-guide-review height-410px">
-			
-			<div class="panel-heading panel-heading-guide-review">
-			
-				Admin Profil
-				
+$content = <<<END
+
+	<div class="row margin-top-100">			
+		<div class="col-md-12 panel panel-default panel-guide-review height-410px">			
+			<div class="panel-heading panel-heading-guide-review">			
+				Admin Profil				
 			</div><!-- panel heading -->
 			
-			<div class="panel-body ">
-				<h4 class="quicksand text-bold">Guider och recensioner</h4>
+			<div class="panel-body">
+				
+				<h4 class="quicksand text-bold pull-left">Guider och recensioner</h4>
+								
+				<h4 class="quicksand text-bold pull-right">Radera / Behålla</h4>
+				
 				<p class="droid text-bold">
+				{$comment_flag}<br><br>
 				{$gr_flag}<br><br>
 				<h4 class="quicksand text-bold">Kommentarer</h4>
-				{$comment_flag}<br><br>
+				
 				</p>
 			</div><!-- panel body -->
 
@@ -142,6 +145,7 @@ END;
 		
 	</div><!-- row margin top 100 -->
 
+	<!-- skript som sätter innehållet som lälmpligt -->
 	<script>
 		$(document).ready(function(){
 			$(.admit).click(function(){
