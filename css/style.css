@@ -132,6 +132,7 @@ margin-bottom: 0;
   margin-top: 200px;
 }
 
+/* Footer */
 #footer
 {
 	min-height: 200px;
@@ -214,7 +215,7 @@ body {
 	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
 	background-size: 100% 100%;
 }
-}
+
 #header {
   margin-left: 0;            /* Sets left margin to zero */
   margin-top: 0;             /* Sets top margin to zero */

@@ -76,6 +76,7 @@ END;
 }
 
 $header = <<<END
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -111,7 +112,6 @@ $(document).ready(function(){
 			Left: '0px'
 		});
     });
-	
 		
 	$(".soek_button").on("mouseout", function(){
         $(".soek_anim").toggleClass(".soek_anim").stop(true, true).animate({
@@ -160,7 +160,7 @@ $(document).ready(function(){
 	$(".header_ikoner.header_home").mouseout(function(){
         $(this).css("background-image", "url('images/home.png')");
     });
-		$(".header_ikoner.header_write").mouseover(function(){
+	$(".header_ikoner.header_write").mouseover(function(){
         $(this).css("background-image", "url('images/pen_meny2.png')");
 	});
 	$(".header_ikoner.header_write").mouseout(function(){
@@ -195,65 +195,78 @@ $(document).ready(function(){
 								
 			</div><!-- col md 1 center -->
 			
-			<!-- Meny hogre -->
+			<!-- Meny högre -->
 			<div class="col-md-5 column-right pull-right margin-right-zero nav nav-pills pull-right">
 			
-				<ul>
-				
+				<ul>				
 					<div class="dropdown">
 				
-					<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
-					aria-expanded="true">
+						<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
+						aria-expanded="true">
+						
+						<a href="profile.php" alt="Profil" title="Profil">
+							<div class="header_ikoner header_profil no-border pull-right"></div>
+						</a>
 					
-					<a href="profile.php" alt="Profil" title="Profil"><div class="header_ikoner header_profil no-border pull-right"></div></a>
-					</li>
 			  		</ul>
 					
-					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
-			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px"> {$_SESSION["keepername"]}{$adminText}</li>
-							<li role="presentation" a role="menuitem" tabindex="-1">{$adminMeny}</li>
-							<li role="presentation" a role="menuitem" tabindex="-1">{$profilMeny}</li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php"><span class="glyphicon glyphicon-cog pull-right text-white" aria-hidden="true"></span>Inställningar</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="logout.php"><span class="glyphicon glyphicon-off pull-right text-white" aria-hidden="true"></span>Logga ut</a></li>
+					<ul class="dropdown-menu drop-margin-0 pull-right dropdown-top-margin Droid
+					bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
+
+			    		<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">
+			    		{$_SESSION["keepername"]} {$adminText}
+			    		</li>
+						<li role="presentation" a role="menuitem" tabindex="-1">{$adminMeny}</li>
+						<li role="presentation" a role="menuitem" tabindex="-1">{$profilMeny}</li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+						<span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a>
+						</li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php">
+						<span class="glyphicon glyphicon-cog pull-right text-white" aria-hidden="true"></span>
+						Inställningar</a>
+						</li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="logout.php">
+						<span class="glyphicon glyphicon-off pull-right text-white" aria-hidden="true"></span>
+						Logga ut</a>
+						</li>
 							
-			    		</ul>
+			    	</ul>
 					</div><!-- dropdown -->
-					</li>
-					
-					
 				
 					<li><a href="index.php" title="Hem"><div class="header_ikoner header_home pull-right"></div></a></li>
-					<li><a href="guide_review.php" alt="Skriv recension/guide" title="Skriv recension/guide"><div class="header_ikoner header_write pull-right"></div></a></li>
+					<li><a href="guide_review.php" alt="Skriv recension/guide" title="Skriv recension/guide">
+					<div class="header_ikoner header_write pull-right"></div></a>
+					</li>
 					
 					<div class="dropdown">
 						
 		  				<ul class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="menu"
-		  				 aria-expanded="true"><div class="header_ikoner header_genrer pull-right" alt="Genrer" title="Genrer"></div>
+		  				 aria-expanded="true"><div class="header_ikoner header_genrer pull-right"
+		  				  alt="Genrer" title="Genrer"></div>
 			  			</ul>
 				 							
-		  				<ul class="dropdown-menu drop-margin-75px pull-right dropdown-top-margin Droid bg-gradient-brown" role="menu" aria-labelledby="dropdownMenu1">
-			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">Genrer</li>
-							<!-- laesa in genrer från db har -->
+		  				<ul class="dropdown-menu drop-margin-75px pull-right dropdown-top-margin Droid bg-gradient-brown"
+		  				 role="menu" aria-labelledby="dropdownMenu1">
+			    			<li role="presentation" class="dropdown-header quicksand text-black text-bold text-16px">
+			    			Genrer</li>
+
+							<!-- läsa in genrer från DB här -->
 							{$genre}
 			    		</ul>
+
 					</div><!-- dropdown -->
-					</li>
-					
-						
-					
 							
-								<form action="search.php" method="GET" class="soek_form">
-								<div class="soek_anim"></div>
-								<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök" title="Sök">
-								
-								</button>
-								<input type="text" class="form-control-search pull-right" id="searchfield" name="search" placeholder="Sök..." required>
-								</form>
-					
+					<form action="search.php" method="GET" class="soek_form">
+						<div class="soek_anim"></div>
+						<button class="soek_button pull-right" type="Submit" value="Sök" alt="Sök" title="Sök">	
+						</button>
+						<input type="text" class="form-control-search pull-right" id="searchfield" name="search"
+						 placeholder="Sök..." required>
+					</form>
+
 				</ul>
 				
-			</div><!-- meny right -->
+			</div><!-- meny högre -->
 			
 			<!-- Meny left row2 -->
 			<div class="col-md-9 column-left-row2 margin-left-zero no-border">
@@ -267,12 +280,16 @@ $(document).ready(function(){
 		</div> <!-- header -->
 
 END;
+
 $content = <<<END
+
 		<div class="container-fluid">
 		
 END;
+
 $footer = <<<END
-<div id="footer" class="footer_bg">
+
+		<div id="footer" class="footer_bg">
 			
 			<!-- footer left with triangle to the right -->			
 			<div class="col-md-9 column-left height-20px">
@@ -312,10 +329,6 @@ $footer = <<<END
 					Annat
 					</p>
 				</div>	
-						
-						
-			
-			
 			
 			</div><!-- -->
 	
@@ -323,43 +336,43 @@ $footer = <<<END
 			
 			<div class="col-md-3 quicksand text-bold text-16px pull-right margin-top-10px">
 				<div class="footer-right">
-			<!--<img src="images/hh.png" class="pull-right margin-right-15px" width="125px">-->
-				GAMETEAM
-				<p class="droid text-normal">
-				<a href="gameteam.php#robert">
-					Robert<br>
-				</a>
-				<a href="gameteam.php#dorte">
-					Dorte<br>
-				</a>
-				<a href="gameteam.php#maria">
-					Maria<br>
-				</a>
-				<a href="gameteam.php#malena">
-					Malena
-				</a>
-				</p>				
-			</div>
-			</div><!-- col md 3 sociala media -->
-			
+					GAMETEAM
+					<p class="droid text-normal">
+					<a href="gameteam.php#robert">
+						Robert<br>
+					</a>
+					<a href="gameteam.php#dorte">
+						Dorte<br>
+					</a>
+					<a href="gameteam.php#maria">
+						Maria<br>
+					</a>
+					<a href="gameteam.php#malena">
+						Malena
+					</a>
+					</p>				
+				</div><!-- footer right -->
+			</div><!-- col md 3 sociala media -->			
 			
 			<div class="col-md-12 pull-left text-left bg-white margin-top-30px">
 			
 				<div class="col-md-11 pull-right">
 				
 					<img src="images/logo_gt.png" width="200px" class="pull-right">
-					<br><br><br><br>
+					<br>
+					<br>
+					<br>
+					<br>
 					<p class="pull-right text-10px">Copyright &copy; 2015 GameTeam.</p>
 				
-				</div><!-- col md 3 -->
+				</div><!-- col md 11 pull right -->
 			
 			</div><!-- col md 12 -->
 			
-		</div> <!-- footer -->
+		</div><!-- footer -->
 	</div><!-- container fluid -->
 	</body>
 </html>
 END;
 
-//<a href="gameteam.php">Vem vi är</a><br>
 ?>
