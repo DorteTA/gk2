@@ -71,8 +71,11 @@ if(isset($_GET['search']))
 {
 // Hämtar ut från guidereviewinfo där titlar liknar sökordet
 	$query = <<<END
-		SELECT * FROM guidereviewinfo
-		WHERE title LIKE '%{$search}%';
+		SELECT *
+		FROM guidereviewinfo
+		WHERE title
+		OR text
+		LIKE '%{$search}%';
 END;
 	$result = $mysqli->query($query) or die();
 
