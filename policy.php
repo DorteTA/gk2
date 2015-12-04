@@ -28,6 +28,7 @@ $content = <<<END
 					<span class="badge badge-info">3</span> Erfarna användare utmanas att välkomma nybörjare.
 					<br><br>
 					<span class="badge badge-info">4</span> Inga spelgenrer är bättre än andra.
+					 Recensera ej spel vars genre du inte gillar.
 					<br><br>
 					<span class="badge badge-info">5</span> Personliga påhopp tolereras ej. Alla stötliga inlägg rapporteras till moderatorer
 					som hanterar busar.							

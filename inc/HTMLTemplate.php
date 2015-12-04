@@ -86,8 +86,9 @@ $header = <<<END
 
 		<title>Gamers Keep - Där Gamers Möts</title>
 
-		<!-- bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+		 integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		
 		<!-- gamerskeep style -->
 		<link rel="stylesheet" href="css/style.css">
@@ -103,6 +104,11 @@ $header = <<<END
     	<![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		 integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		  crossorigin="anonymous"></script>
+
 <!-- soekanimation -->
 <script>
 $(document).ready(function(){
@@ -309,7 +315,7 @@ $footer = <<<END
 					<p class="droid text-normal">
 					Syfte<br>
 					<a href="policy.php">Policy</a><br>
-					FAQ<br>
+					<a href="faq.php">FAQ</a><br>
 					</p>										
 				</div>
 				

@@ -719,6 +719,12 @@ display: block;
 }
 
 /* dortes andringar från dorte2 branch */
+/*
+.list-group-item {
+    display: list-item;
+}
+
+*/
 
 
 
@@ -762,6 +768,14 @@ p {
 .text-white {
   color: white;
 }
+.text-blue {
+  color: #269abc;
+}
+
+.text-orange {
+  color: Orange;
+}
+
 
 .text-bold {
   font-weight: bold;
@@ -1753,6 +1767,8 @@ color: #d43f3a;
 .red-a-text a:hover {
 color: #000;
 }
+
+
 .margin-left-zero > li {
 margin-left: -80px;
 margin-right: 10px;
@@ -1866,4 +1882,9 @@ min-height: 513px;
 
 .error {
   color: #FF0000;
+}
+
+/* Visar Ordered List med auto tal */
+.list-group-item {
+    display: list-item;
 }

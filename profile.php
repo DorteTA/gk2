@@ -59,9 +59,9 @@ END;
 		$profileother = $row->other;
 
 	}
-// Hämtar ut annan användaren bild
-$query = <<< END
 
+// Hämtar ut bild från annan användare
+$query = <<< END
 	
 	SELECT picname, type, size, link
 	FROM picture
@@ -89,7 +89,8 @@ END;
 
 		}
 	}
-// Hämtar ut senaste aktiviteterna för anvnändaren
+
+// Hämtar ut senaste aktiviteterna för användaren
 $latestact = <<<END
 
 	SELECT guidereviewinfo.grid, guidereviewinfo.title, guidereviewinfo.timestamp, guidereviewinfo.grade, userguidereview.grid
@@ -199,9 +200,11 @@ END;
 					$button = <<<END
 					
 					<div class="pull-left">
-						<button type="submit" class="btn btn-xs btn-success pull-left margin-left-50px" name="keeperfr" value="Lägg till"
+						<button type="submit" class="btn btn-xs btn-success pull-left margin-left-50px"
+						 name="keeperfr" value="Lägg till"
 						title="Vänförfrågan skickat">Skickat&nbsp;
-						<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px"
+						 aria-hidden="true"></span>
 						</button>					
 					</div>					
 					
@@ -214,7 +217,8 @@ END;
 						<div class="pull-left">
 							<form action="profile.php?keeperid={$keeperid2}" method="post">
 							<button type="submit" class="btn btn-xs btn-danger pull-left margin-left-50px"
-							onclick="return confirm('Är du säker på att du vill ta bort vännen?')" name="removefriend"
+							onclick="return confirm('Är du säker på att du vill ta bort vännen?')"
+							 name="removefriend"
 							value="Ta bort" title="Ta bort vän">Ta bort vän&nbsp;
 							</button>
 							</form>
@@ -223,8 +227,10 @@ END;
 					$sendmessage = <<<END
 						<div class="pull-right">
 							<button class="btn btn-xs btn-default pull-right margin-right-50px text-white">
-							<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">Skicka meddelande&nbsp;
-								<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px" aria-hidden="true"></span>	
+							<a href="chatcom.php?keeperid={$keeperid2}" class="text-white" title="Skicka meddelande">
+							Skicka meddelande&nbsp;
+								<span class="glyphicon glyphicon-envelope pull-right text-primary text-bold text-14px"
+								 aria-hidden="true"></span>	
 							</a>
 						</button>
 						</div>
@@ -237,8 +243,10 @@ END;
 				$button = <<<END
 				<div class="pull-left">
 				<form action="profile.php?keeperid={$keeperid2}" method="post">
-				<button type="submit" class="btn btn-xs btn-primary pull-left margin-left-50px" name="keeperfr" value="Lägg till" title="Bli vän">Bli vän&nbsp;
-					<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px" aria-hidden="true"></span>
+				<button type="submit" class="btn btn-xs btn-primary pull-left margin-left-50px" name="keeperfr"
+				 value="Lägg till" title="Bli vän">Bli vän&nbsp;
+					<span class="glyphicon glyphicon-ok-sign pull-right text-white text-bold text-14px"
+					 aria-hidden="true"></span>
 				</button>
 				</form>
 				</div>
@@ -246,12 +254,6 @@ END;
 
 		}
 }
-
-
-
-
-
-
 
 // Hämtar ut all information om ens egen profil
 else
@@ -282,26 +284,29 @@ END;
 						<img src="{$link}">
 END;
 			}
-	
-
 		}
 	}
-
 	
+	// Varför finns två redigeringsknappar???
 	$penbutton = <<<END
-	<a href="#"><img src="images/pen.png" width="30px" id="pen" class="pull-right" title="Redigera"></a>
+	<a href="#">
+		<img src="images/pen.png" width="30px" id="pen" class="pull-right" title="Redigera">
+	</a>
 END;
 	$penbutton2 = <<<END
-	<a href="#"><img src="images/pen.png" width="30px" id="pen2" class="pull-right" title="Redigera"></a>
+	<a href="#">
+		<img src="images/pen.png" width="30px" id="pen2" class="pull-right" title="Redigera">
+	</a>
 END;
 
-
+// Updaterar användarens info när änvändaren har tryckt på redigera-knappen
 if(isset($_POST['update']))
 {
 	$about = $mysqli->real_escape_string($_POST['updateinfo']);
 	$query = <<<END
 
-		UPDATE user SET about ='$about'
+		UPDATE user
+		SET about ='$about'
 		WHERE keeperid = '{$keeperid}'
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
@@ -312,7 +317,8 @@ if(isset($_POST['updateothers']))
 	$other = $mysqli->real_escape_string($_POST['updateother']);
 	$query = <<<END
 
-		UPDATE user SET other = '$other'
+		UPDATE user
+		SET other = '$other'
 		WHERE keeperid = '{$keeperid}';
 END;
 		$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . 
@@ -342,11 +348,17 @@ END;
 
 		<form action="profile.php" method="post" id="updateform" class="form control">
 			<textarea id="updateinfo" name="updateinfo" class="col-md-12" rows="6">{$profileabout}</textarea>
-			<button class="btn btn-sm-span span-color-red pull-right text-16px" input name="reset" title="Ångra uppdatering" value="">
+			<button class="btn btn-sm-span span-color-red pull-right text-16px" input name="reset"
+			 title="Ångra uppdatering" value="">
+
+			 	<!-- Ångraicon -->
 				<span class="glyphicon glyphicon-remove pull-right" aria-hidden="true">
 				</span>
+
 			</button>
 			</br>
+			
+			<!-- Uppdatera information knapp -->
 			<input type="submit" id="submit" name="update" value="Uppdatera info" class="btn btn-xs btn-primary">
 			
 		</form>
