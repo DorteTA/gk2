@@ -269,14 +269,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 border: none;
 }
 
-/* center column in the header */
-/*
-#header > .column-center {
-    height: 60px;
-	border: none;
-}
-*/
-
 /* right column in the header */
 #header > .column-right {
     margin-right: 0;
@@ -290,20 +282,7 @@ border: none;
 .height-20px {
     height: 20px;
 }
-/* puts white triangel as css3 fgfx in right column second row in the header */
-/*
-#header > .column-right-row2::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 0 0 20px;
-	
-    border-color: transparent transparent transparent black;
-    line-height: 0;
-}
-*/
+
 .top-to-bottom {
     border-width: auto;
 	border: repeat-x;
@@ -319,13 +298,6 @@ border: none;
     border-image:
       linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
 }
-
-/* clears white triangel at the right side */
-/*
-#header > .column-right-row2::before {
-    right: 0;
-}
-*/
 
 #header > .column-left-row2 {
 	background: url("../images/header_bg_tri.png") no-repeat bottom right;	/* trekant bild */
@@ -386,11 +358,6 @@ margin-left:0;
 	margin-right: 0;
 	outline: 0;
 }
-/* center column in the footer */
-/* not used anymore delete this
-#footer > .column-center {
-}
-*/
 
 /* right column in the footer */
 #footer > .column-right {
@@ -425,25 +392,7 @@ margin-left:0;
   background-repeat: no-repeat;
   outline: 0;
 }
-/* puts white triangel as css3 fgfx in right column second row in the footer */
-/* not used anymore
-#footer > .column-right-row2::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 20px 20px 20px;
-    border-color: transparent transparent transparent black;
-    line-height: 0;
-}
-*/
-/* clears white triangel at the right side */
-/*
-#footer > .column-right-row2::before {
-    right: 0;
-} 
-*/
+
 .bg-white {
     background-color: #fff;    /* Set background color to white */
 }
@@ -718,16 +667,6 @@ display: block;
   list-style: none;
 }
 
-/* dortes andringar från dorte2 branch */
-/*
-.list-group-item {
-    display: list-item;
-}
-
-*/
-
-
-
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -751,6 +690,7 @@ h2.login-font
 .quicksand {
     font-family: 'Quicksand';
     font-size: 16px;
+    font-weight: bold;
 }
 .droid {
     font-family: 'Droid Sans', sans-serif;
@@ -780,6 +720,17 @@ p {
 .text-bold {
   font-weight: bold;
 }
+
+.text-grey {
+  color: Grey;
+  font-weight: bold;
+}
+
+.text-bold-blue {
+  color: Blue;
+  font-weight: bold;
+}
+
 .text-normal {
   font-weight: normal;
 }
@@ -998,10 +949,7 @@ a.text-primary:hover {
 }
 .content-right {
   .make-lg-column(4);
-/*width: 30%;*/
-/*  background-color: yellow; */
 
-/*  .make-lg-column-offset(1); */
 }
 
 .content-full {
@@ -1095,17 +1043,6 @@ a:active {
 .dropdown-top-margin {
 	margin-top: 51px;
 }
-
-/*
-#searchgenrer {
-  margin-left: 25px;
-  font-family: 'Quicksand';
-}
-
-#searchgenre {
-  width: 300px;
-}
-*/
 
 /* Dropdown vit länkfärg */
 .dropdown
@@ -1662,12 +1599,6 @@ left: 0;
 right: 0;
 }
 
-/*.hide{
-display: hidden;
-visibility: hidden;
-}
-*/
-
 #visa {
 background-color: #fff;
 border-radius: 3px;
@@ -1701,18 +1632,6 @@ color: #398439;
 background-color: #398439;
 color: #fff; 
 }
-/*.flag-red {
-color: Red;
-}
-
-.flag-green {
-
-color: Green;
-}
-.flag-black {
-color: #000;
-}
-*/
 
 .flag > .btn {
 
@@ -1842,16 +1761,6 @@ margin-left: 40px;
 	margin-top: -75px;
 	margin-left: -125px;
 }
-
-/*
-.register-container {
-
-}
-
-.register-policy {
-	
-}
-*/
 
 /* register panel heading bredd 415px */
 .panel-default > .panel-heading-415px {

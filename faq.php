@@ -14,7 +14,7 @@ $content = <<<END
 
 			<div class="panel-body height-410px pull-left quicksand">
 					
-				<h4 class="quicksand text-bold">Frågor som oftast ställas</h4>
+				<h4 class="quicksand text-grey">Frågor som oftast ställas</h4>
 				
 				<!-- oftasts ställade frågor -->
 				<p class="quicksand">
@@ -38,23 +38,9 @@ $content = <<<END
 				Klicka på den personens namn du vil bli vän med och skicka en vänanmodning vid att klicka på bli
 				 vän knappen på personens profilsida. Sedan får personen ett meddelandet och kan välja att bli
 				 vän med dig eller inte. Du får inget besked om personen väljer det sissta. 
-				</p>	
-				<br>
-				<br>
-				<span class="badge badge-info">2</span> Med ömsesidigt respekt.
-				<br><br>
-				<span class="badge badge-info">3</span> Erfarna gamers utmanas att välkomma nybörjare.
-				<br><br>
-				<span class="badge badge-info">4</span> Inga spelgenrer är bättre än andra.
-				<br><br>
-				<span class="badge badge-info">5</span> Personliga påhopp tolereras ej. Alla stötliga inlägg rapporteras till moderatorer
-				som hanterar busar.							
-				<br><br>
-				<span class="badge badge-info">6</span> Din mejl address samt namn distribuerar vi ej vidare till tredje part, den
-				hanteras enligt PUL.					
-				<br><br>
-				<span class="badge badge-info">7</span> Ha roligt och prata entusiastiskt om dina favoritspel.
-				Argumentera gärna varför de är dina favoriter!	
+				</p>
+
+				Har du frågor som inte besvarats här, kontakta vänligen supporten.
 					
 			</div><!-- panel body -->
 
