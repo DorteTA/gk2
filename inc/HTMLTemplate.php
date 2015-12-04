@@ -218,7 +218,7 @@ $(document).ready(function(){
 			    		</li>
 						<li role="presentation" a role="menuitem" tabindex="-1">{$adminMeny}</li>
 						<li role="presentation" a role="menuitem" tabindex="-1">{$profilMeny}</li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="faq.php">
 						<span class="glyphicon glyphicon-education pull-right text-white" aria-hidden="true"></span>FAQ</a>
 						</li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="setting.php">

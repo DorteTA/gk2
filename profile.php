@@ -1,6 +1,8 @@
 <?php
 include_once("inc/HTMLTemplate.php");
 include_once("inc/Connstring.php");
+
+// Variabler
 $keepername = $_SESSION['keepername'];
 $keeperid = $_SESSION['keeperid'];
 $keeperid2 = isset($_GET['keeperid']) ? $_GET['keeperid'] : "";
@@ -29,7 +31,7 @@ $friendsaccept = "";
 $friend_count = "";
 $chat_count = "";
 
-// ingen location header annars kan admin inte se sin profil
+// ingen location header annars kan admin inte se sin profilsida
 if($_SESSION['roletype'] == 1)
 {
 	header("Location: admin.php");
@@ -95,7 +97,7 @@ $latestact = <<<END
 	JOIN userguidereview
 	ON guidereviewinfo.grid = userguidereview.grid
 	WHERE keeperid = '{$keeperid2}'
-	ORDER BY timestamp DESC
+	ORDER BY timestamp DESC;
 	
 END;
 $res = $mysqli->query($latestact) or die();
