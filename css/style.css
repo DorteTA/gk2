@@ -386,9 +386,13 @@ margin-left:0;
 .bg-white {
     background-color: #fff;    /* Set background color to white */
 }
+
+/*
 .bg-black {
-    background-color: #000;    /* Set background color to white */
+    background-color: #000;
 }
+
+*/
 
 .margin-right-50px{
 	margin-right: 3em;
