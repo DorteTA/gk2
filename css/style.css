@@ -394,28 +394,37 @@ margin-left:0;
 
 */
 
+/* används på profile.php*/
 .margin-right-50px{
 	margin-right: 3em;
 }
+
+/* används på profile.php*/
 .margin-horizontal-zero{
   margin-left: -15px;
   margin-right: -15px;
 }
 
+/* används i genre.php, profile.php */
 .margin-left-50px{
 	margin-left: 3em;
 }
+
+/* används ej */
+/*
 .ad1 {
 	margin-left: 3em;
 	border: 1px solid black;
 	margin-top: 50px;
 	height: 300px;
 }
+
 .padding-15px {
 	padding-left: 15px;
 	padding-right: 15px;
 	
 }
+*/
 .padding-zero-horizontal {
 	padding-left: 0px;
 	padding-right: 0px;
