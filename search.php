@@ -62,7 +62,7 @@ END;
 	}
 	else
 	{
-		$feedback .= "<p class=\"text-yellow\">Det finns ingen i databasen med det användarnamnet.</p>";
+		$feedback .= "<p class=\"text-yellow\">Det finns ingen här med det användarnamnet.</p>";
 	}
 }
 
@@ -76,6 +76,7 @@ if(isset($_GET['search']))
 		WHERE title
 		OR text
 		LIKE '%{$search}%';
+		
 END;
 	$result = $mysqli->query($query) or die();
 
@@ -95,7 +96,7 @@ END;
 	}
 	else
 	{
-		$feedback .= "<p class=\"text-yellow\">Det finns ingen artikel i databasen med det namnet.</p>";
+		$feedback .= "<p class=\"text-yellow\">Det finns ingen artikel med det namnet.</p>";
 	}
 }
 $content = <<<END
