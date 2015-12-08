@@ -89,8 +89,8 @@ END;
 			$text = utf8_decode($row->text);
 			
 			$article .= <<<END
-				Titel: <a href="genre.php?grid={$grid}">{$title}</a><br>
-				<i>{$text}</i><br><br>
+				<h3><a href="genre.php?grid={$grid}">{$title}</a></h3>
+				<p><i>{$text}</i></p>
 END;
 		}
 	}
@@ -113,7 +113,7 @@ $content = <<<END
   					<div class="panel-body height-410px">
 						
 						<li class="media">
-						{$users}<br>
+						{$users}
 						{$article}
 						{$feedback}
 						</li>

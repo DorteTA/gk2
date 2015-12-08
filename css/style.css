@@ -8,9 +8,12 @@ html, body
 }
 
 /* bakgrund för registerings-sida */
+/* används ej */
+/*
 .register-forgot-background{
   background-color: #993300;
 }
+*/
 
 /* registerings-sidans margin */
 body.register {
@@ -120,6 +123,7 @@ margin-bottom: 0;
   margin-top: 200px;
 }
 
+/* används ej */
 /* Footer
 #footer {
 	min-height: 200px;
