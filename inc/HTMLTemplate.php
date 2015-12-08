@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-$now = time();
+
+//$now = time();
 
 include_once("inc/Connstring.php");
 
@@ -10,18 +11,20 @@ $adminText = "";
 $adminMeny = "";
 $profilMeny = "";
 
+/*
  if ($now > $_SESSION['expire']) {
             session_destroy();
             header("Location: login.php");
         }
+*/
 
-if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])){
+if(isset($_SESSION['keepername']) && isset($_SESSION['roletype'])) {
 
-	if($_SESSION["roletype"] == 1)
-	{
+	if($_SESSION["roletype"] == 1) {
 	$adminText = <<<END
 		<span class="glyphicon glyphicon-king pull-right text-black" aria-hidden="true"></span>
 END;
+
 	$adminMeny = <<<END
 	<li role="presentation">
 		<a role="menuitem" tabindex="-1" href="admin.php">
@@ -36,10 +39,10 @@ END;
 		Delete
 	</button>
 END;
-	
 	}
-	else if($_SESSION["roletype"] == 0)
-	{
+
+	else if($_SESSION["roletype"] == 0) {
+
 	$profilMeny = <<<END
 	<li role="presentation">
 		<a role="menuitem" tabindex="-1" href="profile.php">
@@ -51,6 +54,7 @@ END;
 	}
 }
 
+/* Hämtar genrer från genre tabellen i DB */
 $query = <<<END
 
 	SELECT genretype FROM genre

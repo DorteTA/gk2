@@ -38,37 +38,31 @@ margin-bottom: 0;
 }
 
 /* login-sidans bakgrundbild */
-.login-picture{
+.login-picture {
 	background: url("../images/bg.jpg") no-repeat center center fixed;	
 }
 
 /* login-sidans placering av grafik så den blir responsiv */
-
-.login-person
-{
+.login-person {
 	position: absolute;
 	bottom: 0;
 	left: 160px;
 	z-index: 60;
 }
-	.login-person img 
-	{
+	.login-person img {
 		width: 300px;
 	}
-.login-computer
-{
+.login-computer {
 	position: absolute;
 	bottom: 100px;
 	left: 0;
 	z-index: 50;
 }
-	.login-computer img
-	{
+	.login-computer img	{
 		width: 400px;
 	}
 
-.login-bubble1
-{
+.login-bubble1 {
 	position: absolute;
 	left: 410px;
 	bottom: 230px;
@@ -78,8 +72,7 @@ margin-bottom: 0;
 	z-index: 70;
 }
 
-.login-bubble2
-{
+.login-bubble2 {
 	position: absolute;
 	left: 520px;
 	bottom: 260px;
@@ -89,8 +82,7 @@ margin-bottom: 0;
 	z-index: 80;
 }
 
-.login-bubble3
-{
+.login-bubble3 {
 	position: absolute;
 	left: 650px;
 	bottom: 300px;
@@ -100,8 +92,7 @@ margin-bottom: 0;
 	z-index: 90;
 }
 
-.login-form
-{
+.login-form {
 	position: absolute;
 	left: 750px;
 	bottom: 230px;
@@ -111,33 +102,29 @@ margin-bottom: 0;
 	z-index: 100;
 }
 
-	.login-form input.form-control
-	{
+	.login-form input.form-control {
 		width: 100%;
 	}
 	
-.logo{
+.logo {
 	background-size: 50%;
 }
 
-.login-font
-{
+.login-font {
   font-family: 'Quicksand';
   margin-left: 20px;
   color: white;
 }
 
-.login-copyright
-{
+.login-copyright {
   margin-top: 200px;
 }
 
-/* Footer */
-#footer
-{
+/* Footer
+#footer {
 	min-height: 200px;
 }
-
+*/
 #news
 {
 	background-color: white;
@@ -335,24 +322,25 @@ border: none;
 .img.header-logo {
     height: 60px;
 }
+
 /* footer */
 #footer {
 margin-top: 15px;
-height: 200px;
+min-height: 200px;
 margin-right: 0;
 margin-left:0;
 }
 
 .footer_bg {
-	background: url("../images/footer_bg.png") repeat-x bottom left;	/*  footer background img */
-	height: 200px;              /* Sets height to 200 pixels */
+	background: url("../images/footer_bg.png") repeat-x bottom left;	/* footer background img */
+	height: 200px;                                                    /* Sets height to 200 pixels */
 	width: 100%;
 	outline: 0;
 }
 
 /* left column in the footer */
 #footer > .column-left {
-    margin-left: 0;
+  margin-left: 0;
 	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img */
 	height: 20px;
 	margin-right: 0;
@@ -368,8 +356,10 @@ margin-left:0;
 	outline: 0;
 }
 
+/*
 .column-right-row2 {
 }
+*/
 #footer > .column-left {
 	background: url("../images/footer_bg_tri.png") no-repeat bottom right;	/* trekant bild */
 	height: 20px;
