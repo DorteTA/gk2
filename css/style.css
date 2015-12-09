@@ -2,9 +2,18 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans:400,700");
 
 /* gör backgrund 100 procent lång */
-html, body 
+body, html 
 {
 	height: 100%;
+}
+
+/* Används i HTMLTemplate */
+body {
+  overflow-x: hidden;                                                  /* Hide horizontal overflow */
+  overflow-y: auto;                                                    /* Show vertical overflow */
+  background-color: Blue;                                              /* Set background color to blue */
+  background: url("../images/bg.jpg") no-repeat center center fixed;   /* bakgrundsbild */
+  background-size: 100% 100%;                                          /* Bakgrundsbild ska vara 100% i höjd och bredd */
 }
 
 /* bakgrund för registerings-sida */
@@ -128,14 +137,16 @@ margin-bottom: 0;
 #footer {
 	min-height: 200px;
 }
-*/
+
 #news
 {
 	background-color: white;
 	height: 400px;
 }
 
+
 .toplistname,
+
 .latestlistname
 {
 	margin-left: 50px;
@@ -143,6 +154,7 @@ margin-bottom: 0;
 	margin-top: 50px;
 	height: 50px;
 }
+
 	
 	.toplist,
 	.latestlist
@@ -152,6 +164,7 @@ margin-bottom: 0;
 		margin-left: 50px;
 	}
 
+*/
 /*
 .login
 {
@@ -173,12 +186,15 @@ margin-bottom: 0;
 	width: 100%;
 
 }
+
+/*
 .toplist,
 .latest
 {
 	height: 500px;
 	background-color: white;
 }
+
 #forgot
 {	margin-left: auto;
 	margin-right: auto;
@@ -192,21 +208,17 @@ margin-bottom: 0;
 	
 }
 
+
 #searchresult
 {
   margin-top: 100px;
   min-height: 400px;
 
 }
+*/
 
-body {
-	overflow-x: hidden;        /* Hide horizontal overflow */
-	overflow-y: auto;          /* Show vertical overflow */
-	background-color: brown;    /* Set background color to brown */
-	background: url("../images/bg.jpg") no-repeat center center fixed;	/* bakgrundsbild */
-	background-size: 100% 100%;
-}
 
+/* Används i HTMLTemplate */
 #header {
   margin-left: 0;            /* Sets left margin to zero */
   margin-top: 0;             /* Sets top margin to zero */
@@ -216,13 +228,14 @@ body {
 
 }
 
+/* Används i HTMLTemplate */
 .header-bg {
 	background: url("../images/header_bg_l.png") repeat-x top left;	/* header bakgrundsbild */
 	outline: 0;
 	}
 	
 
-
+/* Används i HTMLTemplate */
 /* left column in the header */
 #header > .column-left {
     margin-left: 0;
@@ -230,10 +243,12 @@ body {
 	border: none;
 }
 
+/* Används i HTMLTemplate */
 .no-border {
 	border: none;
 }
 
+/* Används i HTMLTemplate */
 /* Sets background color to gradient between the rust red in the bottom to the black color at the top */
 .bg-gradient-brown {
   background: -webkit-linear-gradient(#e5e9f7, #5164be);
@@ -241,14 +256,22 @@ body {
   background: -moz-linear-gradient(#e5e9f7, #5164be); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#e5e9f7, #5164be); /* Standard syntax (must be last) */
 }
+
+/* Används ej */
 /* Sets background color to gradient between the black in the bottom to the rust red color at the top */
+/*
 .bg-gradient-black {
   background: -webkit-linear-gradient(#5164be, #e5e9f7);
-  background: -o-linear-gradient(#5164be, #e5e9f7); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#5164be, #e5e9f7); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#5164be, #e5e9f7); /* Standard syntax (must be last) */
+  background: -o-linear-gradient(#5164be, #e5e9f7); /* For Opera 11.1 to 12.0
+  /*
+  background: -moz-linear-gradient(#5164be, #e5e9f7); /* For Firefox 3.6 to 15
+  /*
+  background: linear-gradient(#5164be, #e5e9f7); /* Standard syntax (must be last)
 }
 /* Sets background to black translucent */
+
+
+/* Används ej *
 .bg-gradient-black-trans {
 background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(1%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
@@ -274,6 +297,7 @@ border: none;
     height: 20px;
 }
 
+/*
 .top-to-bottom {
     border-width: auto;
 	border: repeat-x;
@@ -289,6 +313,7 @@ border: none;
     border-image:
       linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
 }
+*/
 
 #header > .column-left-row2 {
 	background: url("../images/header_bg_tri.png") no-repeat bottom right;	/* trekant bild */
@@ -305,18 +330,22 @@ border: none;
 	margin-left: 0;
 	outline: 0;
 }
-
+/*
 .search-center {
 	float: right;
 }
+*/
  
 /* image icons in the header */
+/*
 .img.header-icons {
     height: 30px;
     margin-right: 0px;
     margin-top: 23px;
     margin-left: 20px;
 }
+*/
+
 .margin-right-zero {
     margin-right: 0px;
 }
@@ -343,13 +372,15 @@ margin-left:0;
 }
 
 /* left column in the footer */
+/*
 #footer > .column-left {
   margin-left: 0;
-	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img */
+	background: url("../images/footer_bg_tri.png") no-repeat top right;	/* left row triangle img
 	height: 20px;
 	margin-right: 0;
 	outline: 0;
 }
+*/
 
 /* right column in the footer */
 #footer > .column-right {
@@ -428,18 +459,23 @@ margin-left:0;
 	padding-right: 15px;
 	
 }
-*/
+
 .padding-zero-horizontal {
 	padding-left: 0px;
 	padding-right: 0px;
 }
+*/
 .margin-top-100{ 
 	margin-top: 100px; 
 }
 
+/* Används i register */
 .margin-top-75{ 
 	margin-top: 75px; 
 }
+
+/* Används ej */
+
 
 .panel {
     margin-top: 5px;
@@ -453,6 +489,7 @@ margin-left:0;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
 .panel-default {
   border-color: #ddd;
   margin-left: 25px;
@@ -467,10 +504,13 @@ margin-left:0;
 	margin-bottom: 15px;
 	margin-top: 0;
 }
-
+/*
 .margin-right-7px {
 	margin-right: 10px;
 }
+*/
+
+/* Huvudrubrikers panel */
 .panel-default > .panel-heading {
   border-color: #ddd;
   display: block;
@@ -494,6 +534,7 @@ margin-left:0;
   border-radius: 2px 2px 0 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
+
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #fff;
 }
@@ -528,6 +569,7 @@ margin-left:0;
   height: auto;
 }
 
+/*
 .panel-default > .panel-heading-300px{
   width: 360px;
 }
@@ -537,36 +579,47 @@ margin-left:0;
 .width-360px {
   width: 360px;
 }
+*/
 
+/* Används enbart i faq */
 .panel-width-330px {
   width: 330px;
 }
 
+/* Används enbart i faq */
 .panel-default > .panel-heading-340px {
   width: 340px;
 }
 
+/*
 .panel-width-190px {
   width: 190px;
 }
+
 
 .panel-default > .panel-heading-200px {
   width: 200px;
 }
 
+*/
 /* Profil torn */
+
 
 .profil {
 
   text-align: center;
 }
 
+
+
+/*
 .profil-right {
   margin-right: 10px;
   margin-left: auto;
 
   text-align: center;
 }
+*/
 
 .profil > .column-left-top {
   height: 74px;
@@ -582,9 +635,11 @@ margin-left:0;
   outline: 0;
 }
 
+/*
 .margin-left-15px {
   margin-left: 0;
 }
+*/
 .profil > .column-left-center {
   height: 241px;
   width: 290px;
@@ -613,39 +668,42 @@ outline: 0;
   outline: 0;
 }
 
-
-
 /* profil bild */
 .column-left-center > img {
-    margin: 0 auto;
-    width: 85px;
-	outline: 0;
-  
+  margin: 0 auto;
+  width: 85px;
+	outline: 0;  
 }
 
 /* friend bild */
 .column-left-bottom > img {
-    width: 35px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 0 auto;
-	outline: 0;
-  
+  width: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0 auto;
+	outline: 0;  
 }
 
+/*
 .margin-left-15px {
   margin-left: 15px;
   margin-right: auto;
 }
+*/
 
 .margin-right-15px{
   margin-right: 0px;
   margin-left: auto;
 }
+
+/*
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
 }
+*/
+
+/*
 .list-group-item {
   position: relative;
   display: block;
@@ -655,11 +713,15 @@ outline: 0;
   border: 1px solid #ddd;
 }
 
+
+
 li.views-left{
   float: left;
   list-style: none;
 
 }
+
+*/
 
 li.views{
   float: right;
@@ -667,12 +729,14 @@ li.views{
 
 }
 
+/*
 li.views-profile{
 margin-top: 10px;
 display: block;
   float: right;
   list-style: none;
 }
+*/
 
 .row {
   margin-right: 0px;
@@ -703,7 +767,7 @@ h2.login-font
     font-family: 'Droid Sans', sans-serif;
 }
 p {
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     color: black;
 }
@@ -715,28 +779,35 @@ p {
 .text-white {
   color: white;
 }
+
+/* Används enbart i faq */
 .text-blue {
   color: #269abc;
 }
 
+/* Används enbart i faq */
 .text-orange {
   color: Orange;
 }
-
 
 .text-bold {
   font-weight: bold;
 }
 
+/* Används enbart i faq */
 .text-grey {
   color: Grey;
   font-weight: bold;
 }
 
+/*
+
 .text-bold-blue {
   color: Blue;
   font-weight: bold;
 }
+
+*/
 
 .text-normal {
   font-weight: normal;
@@ -744,82 +815,112 @@ p {
 /* lankfarger genrellt satt till svart */
 
 /* unvisited link */
+
+/*
 a:link {
-    color: #000;
+  color: #000;
 	text-decoration: underline;
 }
+*/
+
 /* visited link */
+/*
 a:visited {
     color: #000;
 }
 
+*/
+
 /* mouse over link */
+
+/*
 a:hover {
     color: #000;
+    text-decoration: underline;
 }
+*/
 
 /* active link */
+
+/*
 a:active {
 	color: #000;
 }
-
+*/
 .dropdown-hover .a:hover {
   visibility: visible;
+  text-decoration: underline;
 }
 /* selected link */
 a:active {
     color: #cc3300;
 }
 
+/* Används i profile */
 a.text-primary {
-  color: #ddd;
+  color: #cc3300;
 }
 
-/* ändrar länkfärg från roströd till svart när musen förs över länkan */
+/* ändrar länkfärg till svart när musen förs över länkan */
 a.text-primary:hover {
   color: black;
 }
 
+/* Sätter textstorlek till 16 pixlar */
 .text-16px {
   font-size: 16px;
 }
 
+/* Sätter textstorlek till 10 pixlar */
 .text-10px {
   font-size: 10px;
 }
 
+/*
 .text-8px {
   font-size: 8px;
 }
+*/
 
+/* Sätter textstorlek till 14 pixlar */
 .text-14px {
   font-size: 14px;
 }
 
+/*
 .login-cloud {
   margin-right: auto;
   margin-left: -30px;
 }
+
 
 .margin-horizontal-25px{
   margin-left: 25px;
   margin-right: 25px;
 }
 
-.margin-left-25px{
+*/
+
+/* Används enbart i Profile */
+.margin-left-25px {
   margin-left: 25px;
   margin-right: auto;
 }
-.margin-right-25px{
+
+/*
+.margin-right-25px {
   margin-right: 25px;
   margin-left: auto;
 }
+
+
 
 .margin-top-110
 {
   margin-top: 51px;
   
 }
+*/
 
 .panel {
     margin-top: 5px;
@@ -868,26 +969,29 @@ a.text-primary:hover {
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
+/* Används enbart i Profile */
 .ovrigt {
   width: 300px;
   clear: both;
 }
 
+/* Används enbart i Profile */
 .panel-default > .ovrigt-heading {
   width: 310px;
 }
 
+/* Används enbart i Profile */
 .aktiviteter {
   width: 225px;
   padding: none;
-  
 }
 
+/* Används enbart i Profile */
 .panel-default > .aktiviteter-heading {
   width: 235px;
-  
-  
 }
+
+/* Används enbart i choosegenre */
 .panel-width-240px {
   width: 400px;
 }
@@ -895,20 +999,24 @@ a.text-primary:hover {
   width: 410px;
 }
 
+/* Används enbart i Profile */
 .profile-tower {
   margin-left: 15px;
 }
 
+/*
 .profil-right {
   margin-right: 0px;
   margin-left: auto;
-
   text-align: center;
 }
+*/
 
+/*
 .margin-left-15px {
   margin-left: 15px;
 }
+*/
 .margin-left-profile {
   margin-left: 10px;
 }
@@ -1191,15 +1299,20 @@ li.login-text > a:visited {
 }
 
 a:link,
-a:active,
-a:visited {
+a:active {
     color: #667094;
 	text-decoration: none;
+}
+
+a:visited {
+    color: #428bca;
+  text-decoration: none;
 }
 
 /* Länkar blir svarta när pilen svävar över dem */
 a:hover {
 	color: #000;
+  text-decoration: underline;
 
 }
 
@@ -1801,6 +1914,8 @@ min-height: 513px;
 }
 
 /* Visar Ordered List med auto tal */
+/*
 .list-group-item {
     display: list-item;
 }
+*/

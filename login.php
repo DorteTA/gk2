@@ -14,12 +14,10 @@ if(isset($_POST["logintosite"]))
 
 // Kollar om något av användarnamnet eller lösenordsfälten är tomma
 
-		if($keepername == '' || $password == '' || $keepername == '' && $password == '' )
-		{
+		if($keepername == '' || $password == '' || $keepername == '' || $password == '' ) {
 			$feedback = "<p class=\"text-yellow\">Fyll i alla fält</p>";
 		}
-		else
-		{
+		else {
 
 			$keepername = $mysqli->real_escape_string($keepername);
 			$password = $mysqli->real_escape_string($password);
@@ -33,7 +31,8 @@ if(isset($_POST["logintosite"]))
 			WHERE keepername = '{$keepername}';
 			
 END;
-			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error); 
+			$res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno . " : " . $mysqli->error);
+
 			if($res->num_rows == 1)
 			{
 				
@@ -41,10 +40,9 @@ END;
 				$row = $res->fetch_object();
 				if($row->pw == $pwmd5)
 				{
-// Startar sessionen och skickar in vidare till index.php
+// Startar sessionen och skickar in vidare till index
 					session_start();
 					session_regenerate_id();
-
 
 					$_SESSION["keepername"] =	$keepername;
 					$_SESSION['start'] = time();
@@ -58,7 +56,7 @@ END;
 
 				else
 				{
-					$feedback = "<p class=\"text-red\">Användarnamn eller lösenord är fel</p>";
+					$feedback = "<p class=\"text-yellow\">Användarnamn eller lösenord är fel.</p>";
 				}
 				$res->close();
 			}

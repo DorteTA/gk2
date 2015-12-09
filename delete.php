@@ -1,6 +1,7 @@
 <?php
 
 include_once("inc/Connstring.php");
+
 // Om get inte är tom så utförs if satsen
 if(!empty($_GET['grid']))
 {
